@@ -1,0 +1,185 @@
+🌲 Random Forest — Self Study Notes
+What is Random Forest?
+
+Random Forest is a Machine Learning algorithm used for:
+
+✅ Classification
+✅ Regression
+
+It works by combining many Decision Trees together to make better predictions.
+
+Think of it like this 👇
+
+One decision tree = one student's answer
+Random forest = whole class voting together
+
+The majority answer becomes the final prediction.
+
+🌳 Decision Tree Recap
+
+A Decision Tree asks questions like:
+
+Is age > 18?
+    ├── Yes → Buy Product
+    └── No → Don't Buy
+
+But a single tree can make mistakes or overfit.
+
+So Random Forest solves this by using many trees.
+
+⚡ How Random Forest Works
+Step 1 — Take Random Data
+
+The algorithm creates many small random datasets from the original dataset.
+
+This is called:
+
+Bootstrap Sampling
+Step 2 — Build Many Trees
+
+For each dataset:
+
+A new decision tree is created
+Each tree uses random features
+
+Example:
+
+Tree 1 uses:
+
+Age
+Salary
+
+Tree 2 uses:
+
+Height
+Weight
+
+Tree 3 uses:
+
+Age
+Experience
+Step 3 — Voting
+For Classification
+
+All trees vote.
+
+Example:
+
+Tree	Prediction
+1	Cat
+2	Dog
+3	Cat
+
+Final Answer = Cat
+
+For Regression
+
+Average value is taken.
+
+Example:
+
+50 + 60 + 55 = 55
+
+Final prediction = 55
+
+🎯 Advantages
+✅ High Accuracy
+
+Usually better than one decision tree.
+
+✅ Reduces Overfitting
+
+Many trees reduce mistakes.
+
+✅ Handles Large Data
+
+Works well with huge datasets.
+
+✅ Works with Missing Values
+
+Can still perform well.
+
+❌ Disadvantages
+❌ Slow
+
+Many trees take more time.
+
+❌ Large Memory Usage
+
+Needs more storage.
+
+❌ Hard to Interpret
+
+Not as simple as one decision tree.
+
+📌 Important Terms
+Term	Meaning
+Decision Tree	Single prediction tree
+Forest	Collection of trees
+Bootstrap	Random sampling
+Feature Randomness	Random feature selection
+Majority Voting	Final class prediction
+📈 Applications of Random Forest
+
+Used in:
+
+🏥 Disease Prediction
+💳 Fraud Detection
+📧 Spam Email Detection
+🛒 Recommendation Systems
+🌦 Weather Prediction
+🧠 Simple Real-Life Example
+
+Imagine predicting whether it will rain.
+
+You ask 10 people:
+
+7 say “Yes”
+3 say “No”
+
+Final answer:
+👉 Rain
+
+That is exactly how Random Forest works.
+
+🔥 Python Example
+from sklearn.ensemble import RandomForestClassifier
+
+model = RandomForestClassifier()
+
+model.fit(X_train, y_train)
+
+prediction = model.predict(X_test)
+📊 Difference Between Decision Tree and Random Forest
+Decision Tree	Random Forest
+One tree	Many trees
+Less accurate	More accurate
+Overfits easily	Reduces overfitting
+Faster	Slower
+📝 Short Definition for Exams
+
+Random Forest is a supervised machine learning algorithm that combines multiple decision trees to improve prediction accuracy and reduce overfitting.
+
+🧪 Interview Questions
+1. Why is it called Random Forest?
+
+Because it creates many random decision trees.
+
+2. Is Random Forest supervised or unsupervised?
+
+✅ Supervised Learning.
+
+3. Which is better — Decision Tree or Random Forest?
+
+Usually Random Forest because it gives better accuracy.
+
+🌟 Final Summary
+
+Random Forest:
+
+Builds many decision trees 🌳
+Uses random data 🎲
+Combines predictions 🤝
+Gives accurate results 🎯
+
+It is one of the most powerful and widely used Machine Learning algorithms.
